@@ -1,0 +1,187 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <title>Solar System</title>
+        <link rel="stylesheet" href="solarsystem.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <header  >
+            <h1 id="header"><span>2D</span> Solar System   </h1>
+        </header>
+        
+        
+
+
+        <div class="cards">
+             
+            <div id="mercury-card" class="infocard"  >
+                
+                 <div class="cross"><img src="./image/cancel.png" alt="cross" onclick="closecards()"  ></div>
+
+     <p><span class="info-words">Speed: </span> 47.87 km/s</p><br>
+     <p>  <span class="info-words">Size:</span> 4,879 km</p><br>
+  <p> <span class="info-words">Distance from Sun:</span> 57.9 million km</p> 
+
+  <button class="btn" onclick="increaseSpeed('mercury')"  >Increase Speed</button>
+  <button class="btn" onclick="decreaseSpeed('mercury')"  >Decrease Speed</button>
+            </div>
+
+            <div id="venus-card" class="infocard">
+                <!-- <div class="cross" onclick="closecard()"><img src="cancel.png" alt="cross"></div> -->
+                <div class="cross"  ><img src="./image/cancel.png" alt="cross"  onclick="closecards()" ></div>
+
+                
+         <p><span class="info-words">Speed: </span> 35.02 km/s </p><br>
+         <p> <span class="info-words">Size:</span> 12,742 km in diameter</p><br>
+         <p> <span class="info-words"> Distance from Sun:</span> 108.2 million km</p>
+
+  <button class="btn" onclick="increaseSpeed('venus')"  >Increase Speed</button>
+  <button class="btn" onclick="decreaseSpeed('venus')"  >Decrease Speed</button>
+
+                       </div>
+ 
+         <div id="earth-card" class="infocard">
+            <div class="cross"  ><img src="./image/cancel.png" alt="cross" onclick="closecards()"></div>
+            
+           <p id="speed"><span class="info-words">Speed: </span> 29.78 km/s</p><br>
+           <p><span class="info-words">Size:</span> 12,742 km in diameter</p><br>
+          <p>  <span class="info-words"> Distance from Sun:</span> 149.6 million km</p>
+  <button class="btn" onclick="increaseSpeed('earth')"  >Increase Speed</button>
+  <button class="btn" onclick="decreaseSpeed('earth')"  >Decrease Speed</button>
+  
+
+     </div>
+
+    <div id="mars-card" class="infocard">
+        <div class="cross"  ><img src="./image/cancel.png" alt="cross" onclick="closecards()"></div>
+        
+         <p><span class="info-words">Speed: </span> 24.07 km/s</p><br>
+         <p> <span class="info-words">Size:</span> 6,779 km in diameter</p><br>
+        <p> <span class="info-words"> Distance from Sun:</span> 227.9 million km</p>
+  <button class="btn" onclick="increaseSpeed('mars')"  >Increase Speed</button>
+  <button class="btn" onclick="decreaseSpeed('mars')"  >Decrease Speed</button>
+
+         </div>
+         <div id="jupiter-card" class="infocard">
+            <div class="cross"  ><img src="./image/cancel.png" alt="cross" onclick="closecards()"></div>
+            
+          <p><span class="info-words">Speed: </span> 13.07 km/s</p><br>
+            <p>  <span class="info-words">Size:</span> 139,820 km in diameter</p><br>
+            <p> <span class="info-words"> Distance from Sun:</span> 778.5 million km</p>
+  <button class="btn" onclick="increaseSpeed('jupiter')"  >Increase Speed</button>
+  <button class="btn" onclick="decreaseSpeed('jupiter')"  >Decrease Speed</button>
+
+             </div>
+            <div id="saturn-card" class="infocard">
+                <div class="cross"  ><img src="./image/cancel.png" alt="cross" onclick="closecards()"></div>
+
+            <p><span class="info-words">Speed: </span> 9.69 km/s</p><br>
+            <p> <span class="info-words">Size:</span> 116,460 km in diameter</p><br>
+            <p> <span class="info-words"> Distance from Sun:</span> 1.4 billion km</p>
+  <button class="btn" onclick="increaseSpeed('saturn')"  >Increase Speed</button>
+  <button class="btn" onclick="decreaseSpeed('saturn')"  >Decrease Speed</button>
+
+           </div> 
+           
+         <div id="uranus-card" class="infocard">
+            <div class="cross"  ><img src="./image/cancel.png" alt="cross" onclick="closecards()"></div>
+
+                <p><span class="info-words">Speed: </span> 6.81 km/s</p><br>
+                <p>  <span class="info-words">Size:</span> 50,724 km in diameter</p><br>
+            <p> <span class="info-words"> Distance from Sun:</span> 2.9 billion km</p>
+  <button class="btn" onclick="increaseSpeed('uranus')"  >Increase Speed</button>
+  <button class="btn" onclick="decreaseSpeed('uranus')"  >Decrease Speed</button>
+            
+           </div> 
+           <div id="neptune-card" class="infocard">
+            <div class="cross"  ><img src="./image/cancel.png" alt="cross" onclick="closecards()"></div>
+
+            <p><span class="info-words">Speed: </span> 5.43 km/s</p><br>
+            <p> <span class="info-words">Size:</span> 49,244 km in diameter</p><br>
+        <p> <span class="info-words"> Distance from Sun:</span> 4.5 billion km</p>
+  <button class="btn" onclick="increaseSpeed('neptune')"  >Increase Speed</button>
+  <button class="btn" onclick="decreaseSpeed('neptune')"  >Decrease Speed</button>
+        
+       </div>                                                     
+            
+             
+        </div>
+       <div class="top" id="trans-form"> <div class="sun sun-orbit" ></div>
+        <div id="mercury-orbit" class="orbit">
+            <div class="mercury " id="mercury">
+               
+            </div>
+            <p >Mercury</p>
+        </div>
+        <div id="venus-orbit" class="orbit">
+            <div class="venus" id="venus">
+                 
+            </div>
+            <p>Venus</p>
+        </div>
+        <div id="earth-orbit" class="orbit">
+            <div class="earth" id="earth"  >
+                
+            </div>
+            <p>Earth</p>
+        </div>
+        <div id="mars-orbit" class="orbit">
+            <div class="mars" id="mars">
+                
+            </div>
+            <p>Mars</p>
+        </div>
+        <div id="jupiter-orbit" class="orbit">
+            <div class="jupiter" id="jupiter">
+                
+            </div>
+            <p>Jupiter</p>
+        </div>
+        <div id="saturn-orbit" class="orbit">
+            <div class="saturn" id="saturn">
+                
+            </div>
+            <div class="saturn-ring">
+                
+            </div>
+            <p>Saturn</p>
+        </div>
+        <div id="uranus-orbit" class="orbit">
+            <div class="uranus" id="uranus">
+                 
+            </div>
+            <div class="uranus-ring">
+                 
+            </div>
+            <p>Uranus</p>
+        </div>
+        <div id="neptune-orbit" class="orbit">
+            <div class="neptune" id="neptune">
+                 
+            </div>
+            <p>Neptune</p>
+        </div>
+         </div>
+         <div class="btn-grp">
+         
+        <button onclick="opencards()" >Mercury</button>
+        <button onclick="opencards()">Venus</button>
+        <button onclick="opencards()" >Earth</button>
+        <button onclick="opencards()" >Mars</button>
+        <button onclick="opencards()" >Jupiter</button>
+        <button onclick="opencards()" >Saturn</button>
+        <button onclick="opencards()" >Uranus</button>
+        <button onclick="opencards()" >Neptune</button></div>
+         <!-- </div>
+         <div class="btn-dime"><button>2D</button></div> -->
+         <br> 
+         <div class="btn-dime"   >
+            <label class="switch"  >
+            <input type="checkbox" checked onclick="trans()">
+            
+            <span class="slider round" > <span id="rotate">2D</span></span>
+          </label></div>
+          <script src="solarsystem.js"></script>
+    </body>
+</html>
